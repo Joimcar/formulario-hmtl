@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Asegúrese de rellenar todos los campos del formulario.
+    </h1> 
+    <form action="index.html" method="get">
+        <div>
+            <p>Este formulario está creado para recoger información acerca del los estudiantes activos en el COLVIA
+            </p>
+            <div>
+            <label for="noms">Ingrese sus nombres.
+            </label>
+            </div>
+            <div>
+            <input type="text" name="nombre" id="noms" required>
+            </div>
+        </div>
+        <div>
+            <div>
+            <label for="apes">Ingrese sus apellidos.
+            </label>
+            </div>
+            <div>
+                <input type="text" name="Apellidos" id="apes" pattern="[a-z]{1,15}" required>
+            </div>
+        </div>
+        <div>
+            <button>Enviar</button>
+        </div>
+    </form>
+</body>
+</html>
