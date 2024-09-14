@@ -3,31 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario COLVIA</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div>
+        <img src="img/logo-school.png" alt="Logo COLVIA">
+    </div>
     <h1>Asegúrese de rellenar todos los campos del formulario.
     </h1> 
-    <form action="index.html" method="get">
+    <form action="index.html" method="get" enctype="multipart/form-data">
         <div>
             <p>Este formulario está creado para recoger información acerca del los estudiantes activos en el COLVIA
             </p>
             <div>
-            <label for="noms">Ingrese sus nombres.
+            <label for="noms">Ingrese sus nombres
             </label>
             </div>
             <div>
-            <input type="text" name="nombre" id="noms" required>
+            <input type="text" name="nombre" id="noms" pattern="[a-z A-Z]+" maxlength="20" required>
             </div>
         </div>
         <div>
             <div>
-            <label for="apes">Ingrese sus apellidos.
+            <label for="apes">Ingrese sus apellidos
             </label>
             </div>
             <div>
-                <input type="text" name="Apellidos" id="apes" pattern="[a-z]{1,15}" required>
+                <input type="text" name="Apellidos" id="apes" pattern="[a-z ]+" maxlength="20" required>
             </div>
+        </div>
+        <div>
+            <div>
+                <label for="color">Ingrese su color favorito
+                </label>
+            </div>
+            <div>
+                <input type="color" required>
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="edad1">Ingrese su edad
+                </label>
+            </div>
+            <div>
+                <input type="number" name="edad" id="edad1" min="5" max="20" required>
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="ide">Ingrese numero de identificación
+                </label>
+            </div>
+            <div>
+                <input type="text" name="identi" id="ide" pattern="^[0-9]*$" minlength="7" maxlength="10" required>
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="numpos">Ingrese su número de teléfono
+                </label>
+            </div>
+            <div>
+                <!-- <input type="number" name="telefono" id="numpos" min="1000000" max="9999999" required> Estoy probando una manera distinta</!-->
+                <input type="text" name="telefono" id="numpos" pattern="^[0-9]*$" minlength="7" maxlength="7" required>
+            </div>
+        </div>
+        <div>
+             <div>
+                <label for="prom">Ingrese aquí el promedio de sus calificaciones
+                </label>
+             </div>
+             <div>
+                <input type="number" name="Calificacion" id="prom" step="0.5" max="20" min="10" value="15" required>
+             </div>
+        </div>
+        <div>
+            <div>
+                <label for="fechanac">Ingrese su fecha de nacimiento
+                </label>
+            </div>
+            <div>
+                <input type="date" name="Fecha Nacimiento" id="fechanac" min="2004-01-01" max="2019-01-01" required>
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="hora">Ingrese la hora de registro
+                </label>
+            </div>
+            <div>
+                <input type="time" name="horareg" id="hora" required>
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="ciudad1">Ingrese la ciudad donde reside
+                </label>
+            </div>
+            <div>
+                <select name="ciudad" id="ciudad1" required>
+                    <option value="Medellín">Medellín</option>
+                    <option value="Bogotá">Bogotá</option>
+                    <option value="Bucaramanga">Bucaramanga</option>
+                    <option value="Barranquilla">Barranquilla</option>
+                    <option value="Cali">Cali</option>
+                </select>
+            </div>
+        <div>
+            <div>
+                <p>Seleccione su género a continuación</p>
+            </div>
+            <div>
+                <label for="mujer1">Femenino</label>
+                <input type="radio" name="genero" id="mujer1" required>
+            </div>
+            <div>
+                <label for="hombre1">Masculino</label>
+                <input type="radio" name="genero" id="hombre1" required>
+            </div>
+            <div>
+                <label for="otro">Otro
+                </label>
+                <input type="radio" name="genero" id="otro" required>
+            </div>
+         </div>
+        </div>
+        <div>
+            <div>
+                <label for="carne1">Ingrese una foto  clara de su carnet
+                </label>
+            </div>
+            <div>
+                <input type="file" name="carnet" id="carne1" multiple accept=".jpg,.png" min="1" required>
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="contra1">Ingrese su contraseña
+                </label>
+            </div>
+            <div>
+                <input type="password" name="contraseña" id="contra1" pattern="[a-zA-Z0-9]+" minlength="8" maxlength="15" required>
+            </div>
+        </div>
+        <div>
+            <div>   
+                <input type="text" name="nombreaprendiz" id="nombreapr" readonly value="Juan Sinisterra" required>
+            </div>
+        </div>
+        <div>
+        <p> Le agradecemos por haber llenado el formulario, en breve estaremos en contacto 
+        </p>
         </div>
         <div>
             <button>Enviar</button>
